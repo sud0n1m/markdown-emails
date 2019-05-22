@@ -2,7 +2,7 @@ var gulp        = require('gulp');
 var browser     = require('browser-sync').create();
 var markdown    = require('gulp-markdown');
 
-// Convert files to markdown
+// Convert files to html
 gulp.task('cmarkdown', () =>
     gulp.src('markdown/*.md')
         .pipe(markdown())
@@ -16,14 +16,6 @@ gulp.task('server', gulp.series('cmarkdown', function() {
             baseDir: "html"
         }
     });
-    gulp.watch('markdown', gulp.series('cmarkdown', browser.reload));
+    gulp.watch("markdown/*.md").on("change", gulp.series('cmarkdown', browser.reload));
+
 }));
-
-
-
-function defaultTask(cb) {
-    // place code for your default task here
-    cb();
-  }
-  
-  exports.default = defaultTask
