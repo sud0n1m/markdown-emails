@@ -1,4 +1,5 @@
-To Do:
+To Do for V1.
 
-1. How do I remove <body> from markdown files and have it still work?
-2. Image processing and uploading to Amazon. 
+[] Upload processed images to amazon S3
+[] Replace links in rendered html w/ S3 urls for distribution.
+[] Automatically insert `<body>` in file for browser-sync to work properly.
