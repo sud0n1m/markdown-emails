@@ -1,4 +1,4 @@
 node_modules
-_build
-dist
+_build/
+dist/
 config.json
