@@ -11,6 +11,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.5",
     "gulp": "^4.0.2",
+    "gulp-awspublish": "^4.0.0",
     "gulp-markdown": "^4.0.0",
     "sharp": "^0.22.1"
   }
