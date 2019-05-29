@@ -7,7 +7,7 @@ const sharp = require("sharp");
 const transforms = [
     {
       src: "./src/img/*",
-      dist: "./dist/img/",
+      dist: "./_build/img/",
       options: {
         width: 1200,
         height: 1000,

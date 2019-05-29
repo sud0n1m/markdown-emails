@@ -13,14 +13,14 @@ const img = require("./gulp-tasks/images.js");
 gulp.task('cmarkdown', () =>
     gulp.src('src/markdown/*.md')
         .pipe(markdown())
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('_build'))
 );
 
 // Static server
 gulp.task('server', gulp.series('cmarkdown', img.resize, function() {
     browser.init({
         server: {
-            baseDir: "dist"
+            baseDir: "_build"
         }
     });
     gulp.watch("src/markdown/*.md").on("change", gulp.series('cmarkdown', browser.reload));
@@ -57,7 +57,7 @@ gulp.task("publish", function() {
    
     return (
       gulp
-        .src("./dist/img/*")   
+        .src("./_build/img/*")   
         // publisher will add Content-Length, Content-Type and headers specified above
         // If not specified it will set x-amz-acl to public-read by default
         .pipe(publisher.publish(headers))
