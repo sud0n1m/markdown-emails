@@ -1,0 +1,11 @@
+{
+    "aws": {
+      "region": "us-east-1",
+      "accessKeyId": "xxxxxxxx",
+      "secretAccessKey": "xxxxxx",
+      "params": {
+          "Bucket": "yourbucket"
+      },
+      "url": "https://s3.amazonaws.com/yourbucket"
+    }
+}
